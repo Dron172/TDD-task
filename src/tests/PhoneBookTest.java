@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PhoneBookTest {
-    private PhoneBook phoneBook;
+    PhoneBook phoneBook = PhoneBook.getINSTANCE();
 
     @Test
     public void testAdd() {
