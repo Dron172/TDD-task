@@ -23,7 +23,9 @@ public class PhoneBook {
         return PHONEBOOK.size();
     }
     public String findByNumber(String number) {
-
+        if (PHONEBOOK.containsValue(number)) {
+            return PHONEBOOK.entrySet().stream().filter(x -> x.getValue().contains(number)).findFirst().get().getKey();
+        }
         return null;
     }
 
