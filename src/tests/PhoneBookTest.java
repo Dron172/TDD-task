@@ -23,5 +23,20 @@ public class PhoneBookTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void testFindByNumber() {
+        //assert
+        String expected = "Ivan";
+        String result;
+        phoneBook.add("Ivan", "89123456789");
+        phoneBook.add("Dasha", "8987654321");
+        phoneBook.add("Irina", "8000111222");
+
+        //act
+        result = phoneBook.findByNumber( "89123456789");
+
+        //assert
+        assertEquals(expected, result);
+    }
 
 }
